@@ -129,7 +129,19 @@ transform:translateY(100vh) rotate(0deg);
 transform:translateY(-120vh) rotate(360deg);
 }
 }
-
+#secret3000{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:30px;
+font-weight:bold;
+opacity:0;
+transition:0.6s;
+pointer-events:none;
+z-index:9999;
+text-shadow:0 0 15px white;
+}
 </style>
 </head>
 
@@ -140,7 +152,13 @@ transform:translateY(-120vh) rotate(360deg);
 <div class="floating" style="left:50%;animation-delay:5s;">🍦</div>
 <div class="floating" style="left:70%;animation-delay:1s;">🎬</div>
 <div class="floating" style="left:90%;animation-delay:4s;">🌙</div>
-
+<div class="floating" style="left:15%;animation-delay:3s;">Ⓐ</div>
+<div class="floating" style="left:25%;animation-delay:8s;">⚡</div>
+<div class="floating" style="left:55%;animation-delay:6s;">❤️</div>
+<div class="floating" style="left:85%;animation-delay:7s;">👽</div>
+<div class="floating" style="left:95%;animation-delay:4s;">🎮</div>
+<div class="floating" id="ironman" style="left:85%;animation-delay:7s;cursor:pointer;">🤖</div>
+<div id="secret3000">❤️3000</div>
 <div class="container">
 
 <h1>Happy Birthday AKSHREɆYA 🎂✨</h1>
@@ -298,7 +316,21 @@ margin:0;
 </div>
 
 </div>
+<script>
 
+document.getElementById("ironman").addEventListener("click",function(){
+
+const msg=document.getElementById("secret3000");
+
+msg.style.opacity="1";
+
+setTimeout(()=>{
+msg.style.opacity="0";
+},2500);
+
+});
+
+</script>
 </body>
 </html>
 ```
